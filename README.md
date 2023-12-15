@@ -1,30 +1,36 @@
-MagicPacket (written in C#)
-===========================
-Wake-on-LANのマジックパケットを送信するサンプル。
+[English](README.md) | [譌･譛ｬ隱枉(README.ja.md)
 
-使い方
-------
+# Magic Packet (written in C#)
 
-IPアドレスとMACアドレスを設定してビルドし、
-出力されたexeを使用するだけ。
+Sample of sending Wake-on-LAN magic packets in C#.
 
-### IPアドレスの設定 ###
+## Usage
 
-Wake-on-LAN対象のPCが所属するネットワークの
-ブロードキャストアドレスを指定します。
+Set the IP address and MAC address, build the solution with Visual Studio, and use the generated executable file.
 
-    /// <summary>Broadcast Address</summary>
-    private const string IpAddress = "192.168.64.15";
+### Setting IP Address
 
-### MACアドレスの設定 ###
+Set the broadcast address for the Wake-on-LAN target PC within the network.
 
-Wake-onLAN対象のNICのMACアドレスを指定します。
+```csharp
+/// <summary>Broadcast Address</summary>
+private const string IpAddress = "192.168.64.15";
+```
 
-    /// <summary>MAC Address</summary>
-    private const string MacAddress = "c8:60:00:dd:ea:b9";
+### Setting MAC Address
 
-関連情報
---------
-C/C++で書かれたサンプルもあります。  
-これだけ短いコードでも、
-C#だと如何に短く書けるか実感できますね。
+Set the MAC address for the Wake-on-LAN target NIC.
+
+```csharp
+/// <summary>MAC Address</summary>
+private const string MacAddress = "c8:60:00:dd:ea:b9";
+```
+
+## License
+
+This software is licensed under the [Unlicense](LICENSE).
+
+## See also
+
+- [MagicPacketCPlus](../../../MagicPacketCPlus) - Sample written in C/C++
+- [MagicPacketBatch](../../../MagicPacketBatch) - Sample batch file
